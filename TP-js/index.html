@@ -22,14 +22,17 @@
         <button id="boutonAjouter">Ajouter la dépense</button>
     </div>
 
-    <div class="entetes">
-        <div>Description</div>
-        <div>Montant (€)</div>
-        <div>Action</div>
-    </div>
-    
-    <div id="listeDepenses">
-    </div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Montant (€)</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="listeDepenses">
+        </tbody>
+    </table>
     
     <div class="total">
         <h2>Total : <span id="affichageTotal">0.00</span> €</h2>
