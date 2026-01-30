@@ -1,6 +1,6 @@
-let boutonEnvoyer = document.getElementById('boutonAjouter');
+let boutonEnvoyer = document.getElementById('boutonAjouter'); 
  
-// J'ai crée une fonction pour ajouter une dépense quand on clique sur le bouton
+// J'ai crée une fonction pour ajouter une dépense quand on clique sur le bouton (Oscar)
 const ajouterDepense = function(event) {
     event.preventDefault();
    
@@ -48,7 +48,7 @@ const ajouterDepense = function(event) {
  
 boutonEnvoyer.addEventListener('click', ajouterDepense);
 
- //Création de la fonction supprimer 
+ //Création de la fonction supprimer ( Hizia )
 const supprimer = function(event) {
     if(confirm("Êtes-vous sûr de vouloir supprimer cette dépense ?")) {
         const bouton = event.target;
@@ -56,4 +56,14 @@ const supprimer = function(event) {
         ligne.remove();
         afficherTotal();
     }
+}
+
+// Création de la fonction qui calcule de total du montant ( Ilan )
+const afficherTotal = function() {
+    let total = 0;
+    const tousLesMontants = document.querySelectorAll('#listeDepenses td:nth-child(2)');
+    tousLesMontants.forEach(cellule => {
+        total += Number(cellule.textContent);
+    });
+    document.getElementById('affichageTotal').textContent = total;
 }
