@@ -47,4 +47,13 @@ const ajouterDepense = function(event) {
 }
  
 boutonEnvoyer.addEventListener('click', ajouterDepense);
- 
+
+ //Création de la fonction supprimer 
+const supprimer = function(event) {
+    if(confirm("Êtes-vous sûr de vouloir supprimer cette dépense ?")) {
+        const bouton = event.target;
+        const ligne = bouton.parentElement.parentElement;
+        ligne.remove();
+        afficherTotal();
+    }
+}
